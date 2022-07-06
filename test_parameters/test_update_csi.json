@@ -1,0 +1,28 @@
+{
+    "connection": "testcsiconnection",
+    "correlationid": "",
+    "operation": "create",
+    "resources": {
+        "namespace": {
+            "name": "default"
+        },
+        "secretProviderClass": {
+            "name": "sc-testcsiconnection-secretprovider",
+            "namespace": "default",
+            "k8sSecretName": "sc-testcsiconnection-secret",
+            "userMIClientId": "246fbbcc-5ae9-48a5-8454-401bd35feeca",
+            "keyvaultName": "test-scextension-kv",
+            "keyvaultTenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47",
+            "keyvaultSecrets": {
+              "testkey3": "testkey3",
+              "testkey4": "testkey4"
+            }
+          },
+          "pod": {
+            "name": "sc-testcsiconnection-pod",
+            "namespace": "default",
+            "k8sSecretName": "sc-testcsiconnection-secret",
+            "secretProviderName": "sc-testcsiconnection-secretprovider"
+        }
+    }
+}

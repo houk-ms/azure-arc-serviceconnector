@@ -1,0 +1,19 @@
+{
+    "connection": "testcsiconnection",
+    "correlationid": "",
+    "operation": "create",
+    "resources": {
+        "namespace": {
+            "name": "default"
+        },
+        "secretProviderClass": {
+            "name": "sc-testcsiconnection-secretprovider",
+            "namespace": "default",
+            "k8sSecretName": "sc-testcsiconnection-secret"
+          },
+          "pod": {
+            "name": "sc-testcsiconnection-pod",
+            "namespace": "default"
+        }
+    }
+}
