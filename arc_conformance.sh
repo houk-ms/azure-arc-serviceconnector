@@ -79,7 +79,7 @@ python tests/check_resource_existance.py test_parameters/test_update_secret.json
 
 # test delete secret
 configs=`python test_parameters/format_parameter.py test_parameters/test_delete_secret.json`
-deleteExtension
+createOrUpdateExtension
 sleep 1m
 python tests/check_resource_deletion.py test_parameters/test_delete_secret.json >${results_dir}/test_delete_secret
 
@@ -97,6 +97,10 @@ python tests/check_resource_existance.py test_parameters/test_update_csi.json >$
 
 # test delete csi
 configs=`python test_parameters/format_parameter.py test_parameters/test_delete_csi.json`
-deleteExtension
+createOrUpdateExtension
 sleep 1m
 python tests/check_resource_deletion.py test_parameters/test_delete_csi.json >${results_dir}/test_delete_csi
+
+
+# delete the extension
+deleteExtension

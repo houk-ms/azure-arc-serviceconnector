@@ -25,8 +25,8 @@ def check_resource_deletion(parameter_file):
     
     # check secret
     secrets = list_secret(ns_name)
-    if secret_name not in secrets:
-        print("Error: Secret {} should not be deleted.".format(secret_name))
+    if secret_name in secrets:
+        print("Error: Secret {} should be deleted.".format(secret_name))
         return
 
     print("Success: Resource deletion checking passed.")
